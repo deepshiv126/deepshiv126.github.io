@@ -1,0 +1,8 @@
+# intellij files
+*.iml
+*.idea
+
+# jekyll
+.jekyll-cache/
+_site/
+Gemfile.lock

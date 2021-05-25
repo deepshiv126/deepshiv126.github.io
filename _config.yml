@@ -1,0 +1,36 @@
+# Site settings
+title: Zeros and Ones
+description: >
+  if you see carefully, zeros and ones are everywhere.
+
+baseurl: null
+url: "https://deepshiv126.github.io/"
+
+author:
+  fullname: Deepak Shivanandappa
+  github: deepshiv126
+  linkedin: deepakshivanandappa
+  stackoverflow: deepshiv126
+  disqus: deepshiv126-github-io
+  google_analytics: UA-122370790-1
+  email: deepshiv126@gmail.com
+
+# Syntax highlighting
+highlightstyle: 'dark'
+styles: [agate, androidstudio, arta, asceti, atelier-cave.dark, atelier-cave.light, atelier-dune.dark, atelier-dune.light, atelier-estuary.dark, atelier-estuary.light, atelier-forest.dark, atelier-forest.light, atelier-heath.dark, atelier-heath.light, atelier-lakeside.dark, atelier-lakeside.light, atelier-plateau.dark, atelier-plateau.light, atelier-savanna.dark, atelier-savanna.light, atelier-seaside.dark, atelier-seaside.light, atelier-sulphurpool.dark, atelier-sulphurpool.light, brown_paper, codepen-embed, color-brewer, dark, darkula, default, docco, far, foundation, github, github-gist, googlecode, grayscale, hopscotch, hybrid, idea, ir_black, kimbie.dark, kimbie.light, magula, mono-blue, monokai, monokai_sublime, obsidian, paraiso.dark, paraiso.light, pojoaque, railscast, rainbow, school_book, solarized_dark, solarized_light, styles_list.txt, sunburst, tomorrow, tomorrow-night-blue, tomorrow-night-bright, tomorrow-night, tomorrow-night-eightie, v, xcode, zenburn]
+
+# Handling Reading
+exclude: ["README.md"]
+
+# Build settings
+highlighter: null
+markdown: kramdown
+
+# Jekyll Plugins
+paginate: 10
+paginate_path: "/myblog/page:num/"
+plugins:
+    - jekyll-feed
+    - jekyll-gist
+    - jekyll-paginate
+    - jekyll-seo-tag
