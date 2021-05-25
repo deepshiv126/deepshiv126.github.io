@@ -1,0 +1,32 @@
+---
+layout: page
+sitemap:
+  priority: 0.7
+---
+
+<!-- This loops through the paginated posts -->
+<ul class="list-posts">
+    {% for post in paginator.posts %}
+        <li class="post-teaser">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+                <span class="post-teaser__title">{{ post.title }}</span>
+                <span class="post-teaser__date">{{ post.date | date: "%d %B %Y" }}</span>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous"> Previous <i class="fa fa-backward"></i></a>
+  {% else %}
+    <span class="previous"> Previous <i class="fa fa-backward"></i></span>
+  {% endif %}
+  <span class="page_number"> Page: {{ paginator.page }} of {{ paginator.total_pages }} </span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next"> Next <i class="fa fa-forward"></i></a>
+  {% else %}
+    <span class="next"> Next <i class="fa fa-forward"></i></span>
+  {% endif %}
+</div>

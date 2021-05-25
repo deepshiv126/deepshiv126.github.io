@@ -1,0 +1,42 @@
+<header class="header">
+    <!-- Navigation Menu -->
+    <div class="navigation">
+        <a href="/" class="logo">{{ site.title }}</a>
+
+        <ul class="menu">
+            <li class="menu__entry"><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+            <li class="menu__entry"><a href="{{ '/' | prepend: site.baseurl }}">Blog</a></li>
+            <li class="menu__entry"><a href="{{ '/tags' | prepend: site.baseurl }}">Tags</a></li>
+            {% for category in site.data.categories %}
+                <li class="menu__entry"><a href="{{ '/categories/' | append: category.slug | prepend: site.baseurl }}">{{ category.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Social Icons  -->
+    <ul class="social-links">
+        {% if site.author.linkedin %}
+            <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" class="social-links__entry" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        {% endif %}
+
+        {% if site.author.github %}
+            <a href="https://github.com/{{ site.author.github }}" class="social-links__entry" target="_blank">
+                <i class="fa fa-github"></i>
+            </a>
+        {% endif %}
+
+        {% if site.author.stackoverflow %}
+            <a href="https://stackoverflow.com/users/4618427/{{ site.author.stackoverflow }}" class="social-links__entry" target="_blank">
+                <i class="fa fa-stack-overflow"></i>
+            </a>
+        {% endif %}
+
+        {% if site.author.email %}
+            <a href="mailto:{{ site.author.email }}?subject={{ site.title }}%20Blog%20-%20Enquiry" class="social-links__entry" target="_blank">
+                <i class="fa fa-envelope-o"></i>
+            </a>
+        {% endif %}
+    </ul>
+</header>
